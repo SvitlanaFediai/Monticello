@@ -1,0 +1,99 @@
+.btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  text-decoration: none;
+ 
+  &__mobile {
+    display: none;
+    z-index: 2;
+
+    @media screen and (min-width: $mobile) and (max-width: $mobile-end){
+      display: block;
+      cursor: pointer;
+
+      color: $color-main;
+    }
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__detail {
+    border: 1px solid $color-black-default;
+    padding: 17px 40px;
+    text-align: center;
+    display: inline-block;
+
+    &:hover {
+      background: linear-gradient(90deg, rgba(126,90,255,1) 0%, rgba(85,183,255,1) 100%);
+
+      color: $color-main;
+
+      border: 1px solid transparent;
+    }
+
+    &--projects {
+      margin: 40px 0 60px 0;
+
+      @media screen and (min-width: $mobile) and (max-width: $mobile-end) {
+        margin: 20px 0 20px 0;
+      }
+    }
+  }
+
+  &__arrow {
+    width: 40px;
+    height: 40px;
+    border: 1px solid $color-main;
+    color: $color-main;
+    border-radius: 50%;
+    margin: 0 auto;
+    line-height: 36px;
+    font-size: 1.25rem;
+    transition: all .3s;
+
+    &:hover {
+      background-color: $color-main;
+      color: $color-black-default;
+    }
+  }
+  
+   
+}
+
+button[type="submit"] {
+  position: relative;
+  right: -50%;
+  transform: translateX(10%);
+
+  @media screen and (min-width: $mobile) and (max-width: $mobile-end) {
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: $mobile) and (max-width: $mobile-end){
+  .line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: $color-main;
+  }
+
+  .btn__mobile.active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .btn__mobile.active .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .btn__mobile.active .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}

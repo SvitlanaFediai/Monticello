@@ -1,0 +1,112 @@
+.contact {
+  position: relative;
+  margin-bottom: 0;
+
+  &__container {
+    color: $color-black-default;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 55px;
+    text-align: left;
+
+    @media screen and (min-width: $mobile) and (max-width: $max-width) {
+      flex-direction: column;
+    }
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 90px 60px 70px 60px;
+    max-width: 770px;
+    z-index: 99;
+
+    background-color: $color-main;
+ 
+    @media screen and (min-width: $mobile) and (max-width: $mobile-end) {
+      padding: 20px;
+      z-index: 0;
+    }
+
+    @media screen and (min-width: $mobile) and (max-width: $max-width) {
+      position: relative;
+      margin-top: 20px;
+    }
+  }
+
+  &__detail {
+    display: flex;
+    gap: 10px;
+
+    @media screen and (min-width: $mobile) and (max-width: $mobile-end) {
+      flex-direction: column;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+
+    color: $color-violet;
+  }
+
+  &__tel,
+  &__email {
+    color: $color-black-default;
+    margin-bottom: 30px;
+  }
+
+  &__address {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+
+    &--mobile {
+      display: none;
+
+      @media screen and (min-width: $mobile) and (max-width: $mobile-end) {
+        display: inline-block;
+        font-weight: 400;
+        text-transform: capitalize;
+        position: absolute;
+        left: 65px;
+      }
+    }
+  }
+
+  &__info {
+    flex-basis: 48%;
+  }
+
+  &__form {
+    flex-basis: 52%;
+  }
+
+  input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: $default-font-size;
+    color: $color-black;
+
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $color-black-default;
+    outline: none;
+    padding: 0 0 15px 0;
+    margin-bottom: 35px;
+
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid $color-violet;
+    }
+  }
+}
+
+.error {
+  box-shadow: 0 0 10px red;
+}

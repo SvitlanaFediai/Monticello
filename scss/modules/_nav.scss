@@ -1,0 +1,65 @@
+.navigation {
+
+  flex-basis: 50%;
+
+  &__list {
+   
+    display: flex;
+    justify-content: space-around;
+    
+    @media screen and (min-width: $mobile) and (max-width: $mobile-end) {
+      position: fixed;
+      top: 76px;
+      flex-direction: column;
+      background-color: rgba(44, 64, 88,0.6);
+      width: 150px;
+      height: 100%;
+      text-align: center;
+      transition: .3s;
+      z-index: 10;
+      right: -150px;
+      justify-content: space-evenly;
+      
+      &--active {
+        right: 0;
+      }
+    }
+    
+    &-item {
+      
+    }
+
+    &-link {
+      position: relative;
+      transition: all .3s;
+      padding-left: 15px;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border: 1px solid $color-main;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all .3s;
+        top: 50%;
+        left: -30%;
+        transform: translate(30%, -50%);
+
+        @media screen and (min-width: $mobile) and (max-width: $mobile-end) {
+          display: none;
+        }
+      }
+
+      &:hover::before {
+        background-color: $color-main;
+      }
+    }
+  }
+
+  &__icon {
+    width: 10px;
+    height: 10px;
+  }
+}

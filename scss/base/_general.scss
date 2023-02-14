@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $default-font-size;
+
+  @media screen and (max-width: $tablet-start) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 12px;
+  }
+}
+
+body {
+  min-width: 350px;
+
+  font-family: $primary-text;
+  font-size: $default-font-size;
+  color: $color-main;
+
+  min-height: 100vh;
+
+}
+
+h2 {
+  margin-bottom: 90px;
+}
+
+section {
+  margin-bottom: 150px;
+  
+  @media screen  and (min-width: $mobile) and (max-width: $mobile-end) {
+    margin-bottom: 40px;
+  }
+}
+
+.divider {
+  position: relative;
+ 
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100px;
+    border: 1px solid $color-black-default;
+    top: -75%;
+    left: 50%;
+    transform: translate(-50%, 75%);
+  }
+  
+  &--reverse {
+
+    &::before {
+      content: "";
+      border: 1px solid $color-main;
+    }
+    
+  }
+}
+

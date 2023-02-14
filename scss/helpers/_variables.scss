@@ -1,0 +1,26 @@
+//fonts
+$primary-text: 'Open Sans', sans-serif;
+$primary-title: 'Montserrat', sans-serif;
+$navigation-text: 'Source Sans Pro', sans-serif;
+
+//colors
+$color-main:              #ffffff;
+$color-black-default:     #2C4058;
+$color-black:             #000000;;
+$color-blue:              #55B7FF;
+$color-violet:            #7E5AFF;
+$color-green:             #85BBB1;
+$color-gray-dark:         #515773;
+
+//breakpoints
+$dekstop: 1360px;
+$tablet-end: $dekstop - 1;
+$tablet-start: 768px;
+$mobile-end: $tablet-start - 1;
+$mobile: 350px;
+
+//font-size
+$default-font-size: 18px;
+
+//width
+$max-width: 1170px;
